@@ -1,8 +1,8 @@
+import 'dotenv/config';
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import { setupScheduler } from "./scheduler";
-import { seedIPOs } from "./seedIPOs";
 
 const app = express();
 app.use(express.json());
@@ -69,7 +69,26 @@ app.use((req, res, next) => {
     reusePort: true,
   }, async () => {
     log(`serving on port ${port}`);
-    await seedIPOs();
     setupScheduler();
+    
+    // Seed IPOs if database is empty
+    try {
+      const { storage } = await import("./storage");
+      const existingIPOs = await storage.getAllUpcomingIPOs();
+      
+      if (existingIPOs.length === 0) {
+        log("Seeding IPO data...");
+        const { ipoService } = await import("./services/ipoService");
+        const ipos = await ipoService.fetchUpcomingIPOs();
+        
+        for (const ipo of ipos) {
+          await storage.createUpcomingIPO(ipo);
+        }
+        
+        log(`Seeded ${ipos.length} upcoming IPOs`);
+      }
+    } catch (error) {
+      console.error("Error seeding IPOs:", error);
+    }
   });
 })();

@@ -18,6 +18,7 @@ export interface StockCardProps {
   volume: string;
   institutionalHolding: number;
   aiReasoning: string;
+  sector?: string;
   onViewDetails?: () => void;
 }
 
@@ -35,6 +36,7 @@ export function StockCard({
   volume,
   institutionalHolding,
   aiReasoning,
+  sector,
   onViewDetails,
 }: StockCardProps) {
   const isPositive = priceChange >= 0;
@@ -71,6 +73,11 @@ export function StockCard({
           <p className="text-sm text-muted-foreground" data-testid={`text-company-${ticker}`}>
             {companyName}
           </p>
+          {sector && (
+            <Badge variant="outline" className="text-[10px] px-1.5 py-0 mt-1" data-testid={`badge-sector-${ticker}`}>
+              {sector}
+            </Badge>
+          )}
         </div>
         <Badge
           variant="secondary"

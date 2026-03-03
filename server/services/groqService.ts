@@ -112,6 +112,67 @@ Be concise and professional. Confidence score should reflect the strength of you
 
     return Promise.all(promises);
   }
+
+  async analyzeIPO(
+    companyName: string,
+    ticker: string,
+    sector: string,
+    expectedValuation: string,
+    priceRange: string,
+    ipoDate: string,
+    news: Array<{ title: string; source: string; sentiment: string }>
+  ): Promise<string> {
+    try {
+      const newsContext = news.length > 0
+        ? news.map(n => `- ${n.title} (${n.source}, ${n.sentiment})`).join('\n')
+        : 'No recent news available';
+
+      const prompt = `You are a professional IPO analyst. Analyze the following upcoming IPO and provide detailed insights.
+
+Company: ${companyName} (${ticker})
+Sector: ${sector}
+Expected Valuation: ${expectedValuation}
+Price Range: ${priceRange}
+IPO Date: ${ipoDate}
+
+Recent News & Sentiment:
+${newsContext}
+
+Provide a comprehensive IPO analysis covering:
+1. **Company Overview**: Brief description of what the company does and its market position
+2. **Investment Thesis**: Key reasons why investors might be interested in this IPO
+3. **Risk Factors**: Main concerns and potential risks for investors
+4. **Valuation Assessment**: Commentary on whether the valuation seems reasonable given the sector and market conditions
+5. **Recommendation**: Your overall assessment (Highly Attractive / Moderately Attractive / Cautious / Avoid) with reasoning
+
+Write in a professional yet accessible tone. Be balanced and objective. Keep the total analysis to about 300-400 words.`;
+
+      const completion = await groq.chat.completions.create({
+        messages: [{ role: "user", content: prompt }],
+        model: "llama-3.3-70b-versatile",
+        temperature: 0.7,
+        max_tokens: 800,
+      });
+
+      return completion.choices[0]?.message?.content || "Analysis unavailable";
+    } catch (error) {
+      console.error("Error in Groq IPO analysis:", error);
+      return `Unable to generate detailed analysis at this time. Please review the company information and recent news to make your investment decision.`;
+    }
+  }
 }
 
 export const groqService = new GroqService();
+
+// Export helper function
+export async function analyzeIPO(
+  companyName: string,
+  ticker: string,
+  sector: string,
+  expectedValuation: string,
+  priceRange: string,
+  ipoDate: string,
+  news: Array<{ title: string; source: string; sentiment: string }>
+): Promise<string> {
+  return groqService.analyzeIPO(companyName, ticker, sector, expectedValuation, priceRange, ipoDate, news);
+}

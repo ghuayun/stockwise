@@ -24,6 +24,8 @@ export interface StockDetailModalProps {
   signal: "BUY" | "HOLD" | "SELL";
   aiInsights: string;
   technicalAnalysis: string;
+  businessSummary?: string;
+  sector?: string;
   news: NewsItem[];
 }
 
@@ -38,6 +40,8 @@ export function StockDetailModal({
   signal,
   aiInsights,
   technicalAnalysis,
+  businessSummary,
+  sector,
   news,
 }: StockDetailModalProps) {
   const isPositive = priceChange >= 0;
@@ -45,6 +49,30 @@ export function StockDetailModal({
     BUY: "hsl(142 71% 45%)",
     HOLD: "hsl(43 96% 56%)",
     SELL: "hsl(0 72% 51%)",
+  };
+
+  // Function to render markdown-style text with proper formatting
+  const renderFormattedText = (text: string) => {
+    const lines = text.split('\n');
+    return lines.map((line, index) => {
+      // Check if line starts with ** (bold section header)
+      if (line.startsWith('**') && line.includes('**:')) {
+        const match = line.match(/\*\*(.+?)\*\*:\s*(.+)/);
+        if (match) {
+          return (
+            <div key={index} className="mb-3">
+              <span className="font-semibold text-foreground">{match[1]}: </span>
+              <span>{match[2]}</span>
+            </div>
+          );
+        }
+      }
+      // Regular line
+      if (line.trim()) {
+        return <div key={index} className="mb-2">{line}</div>;
+      }
+      return null;
+    });
   };
 
   return (
@@ -57,6 +85,11 @@ export function StockDetailModal({
                 {ticker}
               </DialogTitle>
               <p className="text-sm text-muted-foreground">{companyName}</p>
+              {sector && (
+                <Badge variant="outline" className="text-xs px-2 py-0.5 mt-1">
+                  {sector}
+                </Badge>
+              )}
             </div>
             <div className="text-right">
               <div className="text-2xl font-mono font-semibold tabular-nums mb-1">
@@ -93,11 +126,20 @@ export function StockDetailModal({
           <TabsContent value="overview" className="mt-4">
             <ScrollArea className="h-[400px] pr-4">
               <div className="space-y-4">
+                {businessSummary && (
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3">Business Summary</h3>
+                    <div className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">
+                      {businessSummary}
+                    </div>
+                  </div>
+                )}
+                
                 <div>
-                  <h3 className="text-sm font-semibold mb-2">AI Insights</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {aiInsights}
-                  </p>
+                  <h3 className="text-sm font-semibold mb-3">AI Insights</h3>
+                  <div className="text-sm text-muted-foreground leading-relaxed">
+                    {renderFormattedText(aiInsights)}
+                  </div>
                 </div>
               </div>
             </ScrollArea>
@@ -154,9 +196,9 @@ export function StockDetailModal({
               <div className="space-y-4">
                 <div>
                   <h3 className="text-sm font-semibold mb-2">Technical Analysis</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {technicalAnalysis}
-                  </p>
+                  <div className="text-sm text-muted-foreground leading-relaxed">
+                    {renderFormattedText(technicalAnalysis)}
+                  </div>
                 </div>
               </div>
             </ScrollArea>

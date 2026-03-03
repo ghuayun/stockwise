@@ -107,6 +107,36 @@ export class YahooFinanceService {
     if (marketCap >= 10e9) return "mid";    // $10B - $200B
     return "small";                          // < $10B
   }
+
+  async getCompanyProfile(ticker: string): Promise<{ businessSummary: string; website?: string; industry?: string; sector?: string } | null> {
+    try {
+      const result = await yahooFinance.quoteSummary(ticker, {
+        modules: ['summaryProfile', 'assetProfile']
+      });
+      
+      const profile = result.assetProfile || result.summaryProfile;
+      
+      if (!profile) {
+        console.log(`No profile data found for ${ticker}`);
+        return null;
+      }
+
+      return {
+        businessSummary: profile.longBusinessSummary || '',
+        website: profile.website,
+        industry: profile.industry,
+        sector: profile.sector,
+      };
+    } catch (error) {
+      console.error(`Error fetching company profile for ${ticker}:`, error);
+      return null;
+    }
+  }
 }
 
 export const yahooFinanceService = new YahooFinanceService();
+
+// Export helper function
+export async function getCompanyProfile(ticker: string) {
+  return yahooFinanceService.getCompanyProfile(ticker);
+}

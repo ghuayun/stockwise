@@ -1,0 +1,1347 @@
+
+> rest-express@1.0.0 dev
+> cross-env NODE_ENV=development tsx server/index.ts
+
+Γ£ô Using SQLite database: dev.db
+12:52:45 PM [express] serving on port 5000
+Stock recommendation scheduler initialized
+- Daily refresh: 9:00 AM EST (weekdays)
+- Backup refresh: Every 6 hours
+Analyzing custom stock TSLA...
+Γ£ô Connected to ML database: ./stockpredict/data/stocks.db
+  Γ£ô Using ML database data for custom stock TSLA
+Analyzing sentiment for 5 articles using FinBERT...
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 4)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 3)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 1)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 0)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Found 5 articles from Finnhub for TSLA
+Browserslist: browsers data (caniuse-lite) is 15 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+Please consider completing the survey at https://bit.ly/yahoo-finance-api-feedback if you haven't already; for more info see https://github.com/gadicc/node-yahoo-finance2/issues/764#issuecomment-2056623851.  This will only be shown once, but you can suppress this message in future with `yahooFinance.suppressNotices(['yahooSurvey'])`.
+Fetching crumb and cookies from https://finance.yahoo.com/quote/AAPL...
+We expected a redirect to guce.yahoo.com, but got https://finance.yahoo.com/quote/AAPL/
+We'll try to continue anyway - you can safely ignore this if the request succeeds
+Success. Cookie expires on Thu Jan 28 2027 18:53:14 GMT-0800 (Pacific Standard Time)
+fetch https://query1.finance.yahoo.com/v1/test/getcrumb
+New crumb: jBpNqAdBa9N
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Analyzing custom stock NVDA...
+  Γ£ô Using ML database data for custom stock NVDA
+Analyzing sentiment for 5 articles using FinBERT...
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 0)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 3)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 4)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 1)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Found 5 articles from Finnhub for NVDA
+Analyzing custom stock DDOG...
+  Γ£ô Using ML database data for custom stock DDOG
+Analyzing sentiment for 5 articles using FinBERT...
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 3)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 1)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 4)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 0)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Found 5 articles from Finnhub for DDOG
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Analyzing custom stock NVDA...
+  Γ£ô Using ML database data for custom stock NVDA
+Analyzing sentiment for 5 articles using FinBERT...
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 0)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 4)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 1)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 3)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Error calling FinBERT API: Error: FinBERT API error: 410
+    at FinBERTService.analyzeSentiment (D:\git\StockWiseInvest\server\services\finbertService.ts:54:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async FinBERTService.analyzeMultipleTexts (D:\git\StockWiseInvest\server\services\finbertService.ts:81:24)
+    at async NewsService.getNewsFromFinnhub (D:\git\StockWiseInvest\server\services\newsService.ts:94:26)
+    at async NewsService.getStockNews (D:\git\StockWiseInvest\server\services\newsService.ts:30:33)
+    at async StockAnalyzer.analyzeCustomStock (D:\git\StockWiseInvest\server\services\stockAnalyzer.ts:339:18)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:144:22)
+Found 5 articles from Finnhub for NVDA
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^GSPC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 0)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for QQQ: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 3)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^DJI: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 1)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+Error fetching quote for ^IXIC: SyntaxError: Unexpected token 'T', "Too Many Requests
+" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)
+    at successSteps (node:internal/deps/undici/undici:5454:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4381:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5463:7)
+    at async Object.yahooFinanceFetch [as _fetch] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/yahooFinanceFetch.js:86:20)
+    at async Object.moduleExec [as _moduleExec] (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/lib/moduleExec.js:52:18)
+    at async Object.quote (file:///D:/git/StockWiseInvest/node_modules/yahoo-finance2/dist/esm/src/modules/quote.js:238:21)
+    at async YahooFinanceService.getStockQuote (D:\git\StockWiseInvest\server\services\yahooFinance.ts:31:21)
+    at async Promise.all (index 2)
+    at async <anonymous> (D:\git\StockWiseInvest\server\routes.ts:17:22)
+[2026-01-29T11:04:35.228Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Thu Jan 29 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-29T16:00:10.348Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Thu Jan 29 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-29T20:00:18.126Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Thu Jan 29 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-30T04:49:29.109Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Thu Jan 29 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-30T16:00:11.414Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Fri Jan 30 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-30T16:00:11.588Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Fri Jan 30 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-30T16:00:11.687Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Fri Jan 30 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-30T20:00:02.531Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Fri Jan 30 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-31T03:36:32.860Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Fri Jan 30 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-31T11:27:34.431Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sat Jan 31 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-31T16:00:16.270Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sat Jan 31 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-01-31T20:00:18.671Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sat Jan 31 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-01T11:25:09.215Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sat Jan 31 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-01T11:25:09.721Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sun Feb 01 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-01T16:00:16.016Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sun Feb 01 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-01T20:00:17.920Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sun Feb 01 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-02T04:00:17.293Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sun Feb 01 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-02T08:14:23.627Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Mon Feb 02 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-02T14:14:10.067Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Mon Feb 02 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-02T14:14:10.518Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Mon Feb 02 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-03T00:19:15.050Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Mon Feb 02 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-03T18:57:07.137Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Mon Feb 02 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-03T18:57:09.491Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Tue Feb 03 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-03T18:57:09.522Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Tue Feb 03 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-03T18:57:09.580Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Tue Feb 03 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-03T23:37:09.432Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Tue Feb 03 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:03.636Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Tue Feb 03 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:03.934Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Wed Feb 04 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.079Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Wed Feb 04 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.387Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Wed Feb 04 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.412Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Wed Feb 04 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.535Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Thu Feb 05 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.584Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Thu Feb 05 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.598Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Thu Feb 05 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.613Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Thu Feb 05 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.626Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Fri Feb 06 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.644Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Fri Feb 06 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.681Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Fri Feb 06 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.736Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Fri Feb 06 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.753Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sat Feb 07 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.777Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sat Feb 07 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.781Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sat Feb 07 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.799Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sat Feb 07 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.807Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sun Feb 08 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.814Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sun Feb 08 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.819Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sun Feb 08 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.826Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Sun Feb 08 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.849Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Wed Feb 04 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.857Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Thu Feb 05 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T05:05:04.863Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Fri Feb 06 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T08:06:06.381Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Mon Feb 09 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T14:05:59.881Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Mon Feb 09 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-09T14:06:00.605Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Mon Feb 09 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-10T11:11:53.976Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Mon Feb 09 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-10T11:11:54.003Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Mon Feb 09 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-10T11:11:54.038Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Tue Feb 10 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-10T17:33:59.618Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Tue Feb 10 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-10T17:34:00.295Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Tue Feb 10 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-12T05:05:00.264Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Tue Feb 10 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-12T05:05:01.508Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Tue Feb 10 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-12T05:05:01.753Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Wed Feb 11 2026 00:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-12T05:05:01.846Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Wed Feb 11 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-12T05:05:01.860Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Wed Feb 11 2026 12:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-12T05:05:01.871Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Wed Feb 11 2026 18:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-02-12T05:05:01.928Z] [PID: 30184] [NODE-CRON] [WARN] missed execution at Wed Feb 11 2026 06:00:00 GMT-0800 (Pacific Standard Time)! Possible blocking IO or high CPU user at the same process used by node-cron.

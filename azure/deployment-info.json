@@ -1,0 +1,15 @@
+﻿{
+  "SubscriptionId": "355a18d7-3892-4735-b3b2-c802e43aebcf",
+  "ResourceGroupName": "rg-stockwise-prod",
+  "WebAppName": "stockwise-web-prod-omkc6idzcbq4w",
+  "MlAppName": "stockwise-ml-prod-omkc6idzcbq4w",
+  "FunctionAppName": "stockwise-func-prod-omkc6idzcbq4w",
+  "SqlServerName": "stockwise-sql-prod-omkc6idzcbq4w",
+  "SqlDatabaseName": "stockwise-db-prod",
+  "StorageAccountName": "swistomkc6idzcbq4w",
+  "KeyVaultName": "kvomkc6idzcbq4w",
+  "WebAppUrl": "https://stockwise-web-prod-omkc6idzcbq4w.azurewebsites.net",
+  "MlAppUrl": "https://stockwise-ml-prod-omkc6idzcbq4w.azurewebsites.net",
+  "FunctionAppUrl": "https://stockwise-func-prod-omkc6idzcbq4w.azurewebsites.net",
+  "SqlServerFqdn": "stockwise-sql-prod-omkc6idzcbq4w.database.windows.net"
+}

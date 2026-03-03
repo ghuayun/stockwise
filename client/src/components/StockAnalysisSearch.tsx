@@ -25,10 +25,10 @@ export function StockAnalysisSearch({ onAnalyze }: StockAnalysisSearchProps) {
   };
 
   return (
-    <Card className="p-6">
-      <div className="mb-4">
-        <h3 className="text-lg font-semibold mb-1">Custom Stock Analysis</h3>
-        <p className="text-sm text-muted-foreground">
+    <Card className="p-4">
+      <div className="mb-3">
+        <h3 className="text-base font-semibold mb-0.5">Custom Stock Analysis</h3>
+        <p className="text-xs text-muted-foreground">
           Enter a stock ticker to get AI-powered analysis
         </p>
       </div>
@@ -39,7 +39,7 @@ export function StockAnalysisSearch({ onAnalyze }: StockAnalysisSearchProps) {
             placeholder="Enter stock ticker (e.g., TSLA, GOOGL)"
             value={ticker}
             onChange={(e) => setTicker(e.target.value.toUpperCase())}
-            className="font-mono uppercase"
+            className="font-mono uppercase h-8 text-sm"
             data-testid="input-stock-ticker"
             disabled={isLoading}
           />
@@ -48,15 +48,16 @@ export function StockAnalysisSearch({ onAnalyze }: StockAnalysisSearchProps) {
           type="submit"
           disabled={!ticker.trim() || isLoading}
           data-testid="button-analyze-stock"
+          className="h-8 text-xs"
         >
           {isLoading ? (
             <>
-              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              <Loader2 className="w-3 h-3 mr-1.5 animate-spin" />
               Analyzing...
             </>
           ) : (
             <>
-              <Search className="w-4 h-4 mr-2" />
+              <Search className="w-3 h-3 mr-1.5" />
               Analyze
             </>
           )}
